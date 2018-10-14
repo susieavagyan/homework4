@@ -84,23 +84,19 @@ console.log(multiToSingle([[1,2,3],[4,5,6]]))
 //5//
 const findMinMax=function(array,boo) {
 	let result=array[0];
-	let index=0;
+	let index=1;
 		if (boo===true) {
-			while (index<array.length-1) {
-				if(array[index]<array[index+1]) {
-					result=array[index+1];
-				} else {
-					result=array[index]
+			while (index<array.length) {
+				if(array[index]>result) {
+					result=array[index];
 				};
 				index=index+1;
 			}
 			return result 
         } else {
-		    while (index<array.length-1) {
-		    	if(array[index]<array[index+1]) {
+		    while (index<array.length) {
+		    	if(array[index]<result) {
 					result=array[index];
-				} else {
-					result=array[index+1]
 				};
 				index=index+1;
 		    }
